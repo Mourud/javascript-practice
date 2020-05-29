@@ -31,18 +31,10 @@ window.addEventListener("load", () => {
           tempVal.textContent = temperature;
           tempDesc.textContent = desc;
           timeZone.textContent = timezone;
-          setIcons(icon, document.querySelector(".icon"));
+          // setIcons(icon, document.querySelector(".icon"));
         });
     });
   } else {
     h1.textContent = "Please enable location for this webpage to work";
-  }
-
-  function setIcons(icon, iconID) {
-    const skycons = new Skycons({ color: "white" });
-    // const currentIcon = icon.replace(/-/g, "_").toUpperCase();
-    // console.log(icon.replace(/-/g, "_").toUpperCase());
-    skycons.play();
-    return skycons.set(iconID, Skycons["CLOUDY"]);
   }
 });
