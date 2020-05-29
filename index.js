@@ -26,8 +26,7 @@ window.addEventListener("load", () => {
           console.log(data);
           const temperature = Math.round(data.current.temp - 273.15);
           const desc = data.current.weather[0].description;
-          const icon = data.current.weather[0].main;
-          console.log(icon);
+          const icon = data.current.weather[0].icon;
           const timezone = data.timezone;
           tempVal.textContent = temperature;
           tempDesc.textContent = desc;
@@ -41,8 +40,8 @@ window.addEventListener("load", () => {
 
   function setIcons(icon, iconID) {
     const skycons = new Skycons({ color: "white" });
-    const currentIcon = icon.replace(/-/g, "_").toUpperCase();
-    console.log(icon.replace(/-/g, "_").toUpperCase());
+    // const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+    // console.log(icon.replace(/-/g, "_").toUpperCase());
     skycons.play();
     return skycons.set(iconID, Skycons["CLOUDY"]);
   }
