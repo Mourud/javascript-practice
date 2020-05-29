@@ -29,9 +29,9 @@ window.addEventListener("load", () => {
           const icon = data.current.weather[0].icon;
           const timezone = data.timezone;
           tempVal.textContent = temperature;
-          tempDesc.textContent = desc;
+          // desc.slice(0)
+          tempDesc.textContent = desc[0].toUpperCase() + desc.slice(1);
           timeZone.textContent = timezone;
-          // setIcons(icon, document.querySelector(".icon"));
         });
     });
   } else {
